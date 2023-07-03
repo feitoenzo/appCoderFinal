@@ -1,12 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/* import { StyleSheet, Text, View } from 'react-native';
+
+import ShopNavigator from './src/navigation/ShopNavigator';
+import { useFonts } from 'expo-font';
 
 export default function App() {
+ 
+ const [loaded] = useFonts ({
+    Tipografia1: require("./src/assets/fonts/Kanit-Bold.ttf"),
+    Tipografia2: require("./src/assets/fonts/Kanit-Regular.ttf")
+});
+   if(!loaded) return null
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ShopNavigator/>
   );
 }
 
@@ -17,4 +22,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  texto: {
+    fontFamily: "Tipografia2"
+  }
 });
+ 
+ */
+import BottomTabNavigator from "./src/navigation/BottomTabNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <BottomTabNavigator />
+    </NavigationContainer>
+  );
+}
+
+
+ 
+ 
