@@ -7,6 +7,15 @@ import OrdersReducer from "./reducers/orders.reducer";
 import ProductReducer from "./reducers/products.reducer";
 import thunk from "redux-thunk";
 
+//Ya ha una version nueva de CreateStore po eso esta tachada
+
+
+
+
+
+
+
+//Dede aca parten los estados.
 const RootReducer = combineReducers({
   categories: CategoryReducer,
   products: ProductReducer,
