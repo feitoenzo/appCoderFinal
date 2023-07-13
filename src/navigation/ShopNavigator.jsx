@@ -28,7 +28,7 @@ const ShopNavigator = () => {
         >
             <Stack.Screen name='Inicio' component={CategoriesScreen}
               options={{
-          title: "Categories",
+          title: "Categorias",
         }}/>
             <Stack.Screen name='Juego' component={CategoryProductsScreen}options={({ route })=> ({
               title: route.params.name

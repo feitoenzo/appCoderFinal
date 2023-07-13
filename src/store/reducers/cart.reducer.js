@@ -5,6 +5,7 @@ const initial_state = {
   total: 0,
 };
 
+//funcion de la suma del carrito
 const sumTotal = list => {
   return list
     .map(item => item.quantity * item.price)
@@ -15,6 +16,7 @@ const CartReducer = (state = initial_state, action) => {
   switch (action.type) {
     case REMOVE_ITEM:
       const cleanCart = [...state.items].filter(
+        //este id viene de las acttions del cart
         item => item.id !== action.itemId
       );
       return { ...state, items: cleanCart, total: sumTotal(cleanCart) };
@@ -24,6 +26,7 @@ const CartReducer = (state = initial_state, action) => {
       );
       if (indexItem === -1) {
         const item = { ...action.item, quantity: 1 };
+        // se acatualiza el carrito
         const updateCart = [...state.items, item];
         console.log(updateCart);
         return { ...state, items: updateCart, total: sumTotal(updateCart) };
